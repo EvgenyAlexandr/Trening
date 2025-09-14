@@ -1,5 +1,6 @@
 import java.util.*;
 
+
 public class Main {
     public static void main(String[] args) {
 
@@ -17,6 +18,8 @@ public class Main {
         Test_ArrayList();
         Test_LinkedList();
 
+        //Collections_List.Test();
+        //Test();
 
     }
 
