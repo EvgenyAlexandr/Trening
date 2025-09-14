@@ -3,23 +3,19 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
 
-        // Java Collections Framework: List
-        /* Основные интерфейсы:
-            • List - упорядоченные элементы с дубликатами
-            • Set - уникальные элементы без порядка
-            • Map - пары ключ-значение    */
+        /* Java Collections Framework
+         Collections - Основные интерфейсы:
+            ├-- List - упорядоченные элементы с дубликатами
+            ├-- Set  - уникальные элементы без порядка
+            └-- Map  - пары ключ-значение            */
 
         /* List
             ├-- ArrayList   - (Массив, с авто величиной)
             ├-- LinkedList  - (Node - 3 поля: Значение, адресПредидущего, адресСледующего)
             └-- Vector      - (Редко используется)              */
 
-        // ArrayList
         Test_ArrayList();
-        // LinkedList
         Test_LinkedList();
-
-
 
 
     }
