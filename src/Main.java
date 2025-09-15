@@ -27,7 +27,7 @@ public class Main {
         Set
         ├-- HashSet         - (быстро, уникально, беспорядочно)
         ├-- TreeSet         - (отсортировано, уникально, медленнее HashSet)
-        └-- LinkedHashSet   - (быстро, уникально, с порядком добавления)      */
+        └-- LinkedHashSet   - (быстро, уникально, сохраняет порядок добавления)      */
         //Test_Set_HashSet ();
         //Test_Set_TreeSet ();
         Test_Set_LinkedHashSet ();
