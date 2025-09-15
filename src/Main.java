@@ -15,8 +15,22 @@ public class Main {
             ├-- LinkedList  - (Node - 3 поля: Значение, адресПредидущего, адресСледующего)
             └-- Vector      - (Редко используется)              */
 
-        Test_ArrayList();
-        Test_LinkedList();
+        //Test_List_ArrayList();
+        //Test_List_LinkedList();
+
+        /* Set - Множества
+        • Коллекция уникальных элементов
+        • Запрещает дубликаты
+        • Основные реализации: HashSet, TreeSet, LinkedHashSet
+        Короче: только уникальные значения, нет порядка (кроме LinkedHashSet и TreeSet).
+
+        Set
+        ├-- HashSet         - (быстро, уникально, беспорядочно)
+        ├-- TreeSet         - (отсортировано, уникально, медленнее HashSet)
+        └-- LinkedHashSet   - (быстро, уникально, с порядком добавления)      */
+        //Test_Set_HashSet ();
+        Test_Set_TreeSet ();
+
 
         //Collections_List.Test();
         //Test();
@@ -24,9 +38,16 @@ public class Main {
     }
 
 
-    public static void Test_ArrayList () {
 
-        System.out.println("List - ArrayList");
+
+    public static void Test_List_ArrayList () {
+        /* ArrayList:
+          •	Динамический массив элементов
+          •	Быстрый доступ по индексу (O(1))
+          •	Медленные вставки/удаления в середине
+          Короче: быстро ищется, медленно меняется.   */
+
+        System.out.println("\nList - ArrayList");
 
         List<String> list_String = new ArrayList<>();
         list_String.add("Один");
@@ -53,17 +74,15 @@ public class Main {
             String element = iterator.next();
             System.out.println(element);
         }
-
-        /* ArrayList:
-          •	Динамический массив элементов
-          •	Быстрый доступ по индексу (O(1))
-          •	Медленные вставки/удаления в середине
-          Короче: быстро ищется, медленно меняется.   */
     }
 
-    public static void Test_LinkedList () {
-
-        System.out.println("List - LinkedList");
+    public static void Test_List_LinkedList () {
+        /* LinkedList:
+          • Двусвязный список элементов
+          • Быстрые вставки/удаления в середине
+          • Медленный доступ по индексу
+        Короче: быстро меняется, медленно ищется.           */
+        System.out.println("\nList - LinkedList");
 
         List<String> list_String = new LinkedList<>();
         list_String.add("Один");
@@ -90,11 +109,79 @@ public class Main {
             String element = iterator.next();
             System.out.println(element);
         }
-
-        /* LinkedList:
-            • Двусвязный список элементов
-            • Быстрые вставки/удаления в середине
-            • Медленный доступ по индексу
-           Короче: быстро меняется, медленно ищется.  */
     }
+
+    public static void Test_Set_HashSet () {
+        /* HashSet:
+            • Нет индексов, т.е методов get и set тоже нет.
+            • Хранит элементы в хеш-таблице
+            • Максимальная производительность (O(1))
+            • Не гарантирует порядок элементов
+        Короче: быстро, уникально, беспорядочно.    */
+
+        System.out.println("\nSet - HashSet");
+
+        Set<Integer> numbers = new HashSet<>();
+
+        // Теперь добавим ряд целочисленных переменных во множество
+        numbers.add(5);
+        numbers.add(3);
+        numbers.add(1);
+        numbers.add(7);
+        numbers.add(2);
+        numbers.add(4);
+        System.out.println(numbers);
+
+        // С помощью contains можно проверить наличие элемента в сете
+        if (numbers.contains(5)) {
+            System.out.println("Хватит вставлять сюда 5!");
+        }
+
+        // Выведем размер множества в консоль
+        System.out.println("Размер множества HashSet = " + numbers.size());
+
+
+        // Удалим число 5 с помощью метода remove
+        numbers.remove(5);
+        // Выведем оставшиеся значения
+        System.out.println("Удалим из множества 5 и выведем все что осталось = " + numbers);
+    }
+
+    private static void Test_Set_TreeSet() {
+        /* TreeSet:
+            • Хранит элементы в красно-черном дереве
+            • Автоматическая сортировка элементов
+            • Производительность O(log n)
+        Короче: отсортировано, уникально, медленнее HashSet.        */
+
+        System.out.println("\nSet - TreeSet");
+
+        Set<Integer> numbers = new TreeSet<>();
+
+        // Теперь добавим ряд целочисленных переменных во множество
+        numbers.add(5);
+        numbers.add(3);
+        numbers.add(1);
+        numbers.add(7);
+        numbers.add(2);
+        numbers.add(4);
+        System.out.println(numbers);
+
+        // С помощью contains можно проверить наличие элемента в сете
+        if (numbers.contains(5)) {
+            System.out.println("Хватит вставлять сюда 5!");
+        }
+
+        // Выведем размер множества в консоль
+        System.out.println("Размер множества HashSet = " + numbers.size());
+
+
+        // Удалим число 5 с помощью метода remove
+        numbers.remove(5);
+        // Выведем оставшиеся значения
+        System.out.println("Удалим из множества 5 и выведем все что осталось = " + numbers);
+    }
+
+
 }
+
