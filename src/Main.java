@@ -29,7 +29,11 @@ public class Main {
         ├-- TreeSet         - (отсортировано, уникально, медленнее HashSet)
         └-- LinkedHashSet   - (быстро, уникально, с порядком добавления)      */
         //Test_Set_HashSet ();
-        Test_Set_TreeSet ();
+        //Test_Set_TreeSet ();
+        Test_Set_LinkedHashSet ();
+
+
+
 
 
         //Collections_List.Test();
@@ -147,7 +151,7 @@ public class Main {
         System.out.println("Удалим из множества 5 и выведем все что осталось = " + numbers);
     }
 
-    private static void Test_Set_TreeSet() {
+    public static void Test_Set_TreeSet() {
         /* TreeSet:
             • Хранит элементы в красно-черном дереве
             • Автоматическая сортировка элементов
@@ -182,6 +186,41 @@ public class Main {
         System.out.println("Удалим из множества 5 и выведем все что осталось = " + numbers);
     }
 
+    public static void Test_Set_LinkedHashSet () {
+        /* LinkedHashSet:
+            • Сочетание HashSet и LinkedList
+            • Сохраняет порядок добавления элементов
+            • Производительность близка к HashSet (O(1))
+        Короче: уникально, быстро, с порядком добавления.       */
+
+        System.out.println("\nSet - LinkedHashSet");
+
+        Set<Integer> numbers = new LinkedHashSet<>();
+
+        // Теперь добавим ряд целочисленных переменных во множество
+        numbers.add(5);
+        numbers.add(3);
+        numbers.add(1);
+        numbers.add(7);
+        numbers.add(2);
+        numbers.add(4);
+        System.out.println(numbers);
+
+        // С помощью contains можно проверить наличие элемента в сете
+        if (numbers.contains(5)) {
+            System.out.println("Хватит вставлять сюда 5!");
+        }
+
+        // Выведем размер множества в консоль
+        System.out.println("Размер множества HashSet = " + numbers.size());
+
+
+        // Удалим число 5 с помощью метода remove
+        numbers.remove(5);
+        // Выведем оставшиеся значения
+        System.out.println("Удалим из множества 5 и выведем все что осталось = " + numbers);
+
+    }
 
 }
 
