@@ -21,8 +21,8 @@ public class Main {
                 list.size()              // количество элементов
                 list.indexOf(element)    // найти индекс элемента     */
 
-        //Test_List_ArrayList();
-        //Test_List_LinkedList();
+        Test_List_ArrayList();
+        Test_List_LinkedList();
 
         /* Set - Множества
         • Коллекция уникальных элементов
@@ -39,8 +39,8 @@ public class Main {
             ├-- HashSet         - (быстро, уникально, беспорядочно)
             ├-- TreeSet         - (отсортировано, уникально, медленнее HashSet)
             └-- LinkedHashSet   - (быстро, уникально, сохраняет порядок добавления)      */
-        //Test_Set_HashSet ();
-        //Test_Set_TreeSet ();
+        Test_Set_HashSet ();
+        Test_Set_TreeSet ();
         Test_Set_LinkedHashSet ();
 
         /* Map - пары ключ-значение
