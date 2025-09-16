@@ -13,7 +13,13 @@ public class Main {
         /* List
             ├-- ArrayList   - (Массив, с авто величиной)
             ├-- LinkedList  - (Node - 3 поля: Значение, адресПредидущего, адресСледующего)
-            └-- Vector      - (Редко используется)              */
+            └-- Vector      - (Редко используется)
+                ========= Основные методы =========
+                list.add(element)        // добавить в конец
+                list.get(index)          // получить по индексу
+                list.remove(index)       // удалить по индексу
+                list.size()              // количество элементов
+                list.indexOf(element)    // найти индекс элемента     */
 
         //Test_List_ArrayList();
         //Test_List_LinkedList();
@@ -23,11 +29,16 @@ public class Main {
         • Запрещает дубликаты
         • Основные реализации: HashSet, TreeSet, LinkedHashSet
         Короче: только уникальные значения, нет порядка (кроме LinkedHashSet и TreeSet).
+        ========= Основные методы =========
+        set.add(element)        // добавить элемент
+        set.remove(element)     // удалить элемент
+        set.contains(element)   // проверить наличие
+        set.size()              // количество элементов     */
 
-        Set
-        ├-- HashSet         - (быстро, уникально, беспорядочно)
-        ├-- TreeSet         - (отсортировано, уникально, медленнее HashSet)
-        └-- LinkedHashSet   - (быстро, уникально, сохраняет порядок добавления)      */
+        /* Set
+            ├-- HashSet         - (быстро, уникально, беспорядочно)
+            ├-- TreeSet         - (отсортировано, уникально, медленнее HashSet)
+            └-- LinkedHashSet   - (быстро, уникально, сохраняет порядок добавления)      */
         //Test_Set_HashSet ();
         //Test_Set_TreeSet ();
         Test_Set_LinkedHashSet ();
@@ -35,6 +46,31 @@ public class Main {
 
 
 
+
+        /* Map - пары ключ-значение
+            ├-- HashMap       - (быстро, уникально, беспорядочно)
+            ├-- TreeMap       - (отсортировано, уникально, медленнее HashSet)
+            └-- LinkedHashMap - (быстро, уникально, сохраняет порядок добавления)
+
+
+
+        // Основные методы
+            map.put(key, value)     // добавить/заменить
+            map.get(key)            // получить значение
+            map.remove(key)         // удалить
+            map.containsKey(key)    // проверить ключ
+            map.keySet()            // все ключи
+            map.values()            // все значения
+
+
+
+
+         , , LinkedHashMap       */
+
+        Map<String, Integer> map = new HashMap<>();
+        map.put("apple", 1);
+        map.put("banana", 2);
+        int count = map.get("apple"); // 1
 
         //Collections_List.Test();
         //Test();
