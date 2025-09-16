@@ -43,34 +43,26 @@ public class Main {
         //Test_Set_TreeSet ();
         Test_Set_LinkedHashSet ();
 
-
-
-
-
         /* Map - пары ключ-значение
             ├-- HashMap       - (быстро, уникально, беспорядочно)
             ├-- TreeMap       - (отсортировано, уникально, медленнее HashSet)
             └-- LinkedHashMap - (быстро, уникально, сохраняет порядок добавления)
+                ========= Пример объявления =========
+            Map<String, Integer> map = new HashMap<>();
+            map.put("apple", 1);
+            map.put("banana", 2);
+            int count = map.get("apple"); // 1
+                ========= Основные методы =========
+                map.put(key, value)     // добавить/заменить
+                map.get(key)            // получить значение
+                map.remove(key)         // удалить
+                map.containsKey(key)    // проверить ключ
+                map.keySet()            // все ключи
+                map.values()            // все значения         */
+
+        
 
 
-
-        // Основные методы
-            map.put(key, value)     // добавить/заменить
-            map.get(key)            // получить значение
-            map.remove(key)         // удалить
-            map.containsKey(key)    // проверить ключ
-            map.keySet()            // все ключи
-            map.values()            // все значения
-
-
-
-
-         , , LinkedHashMap       */
-
-        Map<String, Integer> map = new HashMap<>();
-        map.put("apple", 1);
-        map.put("banana", 2);
-        int count = map.get("apple"); // 1
 
         //Collections_List.Test();
         //Test();
