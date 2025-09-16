@@ -59,8 +59,8 @@ public class Main {
                 map.containsKey(key)    // проверить ключ
                 map.keySet()            // все ключи
                 map.values()            // все значения         */
+        Test_Map_HashMap ();
 
-        
 
 
 
@@ -247,6 +247,28 @@ public class Main {
         numbers.remove(5);
         // Выведем оставшиеся значения
         System.out.println("Удалим из множества 5 и выведем все что осталось = " + numbers);
+
+    }
+
+    public static void Test_Map_HashMap () {
+        System.out.println("\nMap - HashMap");
+
+        Map<String, Integer> map = new HashMap<>();
+        map.put("key0", 2);
+        map.put("key1", 7);
+        map.put("key2", 9);
+        map.put("key3", 4);
+
+        map.remove("key1"); // Удаление по ключу
+
+        System.out.println("map.get(\"key0\") = " + map.get("key0"));   // Получаем значение по ключу (Чувствителен к регистру знаков)
+        System.out.println("map = " + map);                             // Отображаем Map
+        System.out.println("map.keySet() = " + map.keySet());           // Отображаем все ключи
+        System.out.println("map.values() = " + map.values());           // Отображаем все значения
+
+        for (String k : map.keySet()) {     // Отображаем все ключи
+            System.out.println(k);
+        }
 
     }
 
